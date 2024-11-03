@@ -1,0 +1,636 @@
+header {
+    background-color: #09031D;
+    height: 70px;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Square Eyes Logo - Menu */
+.logo {
+    font-family: "Koulen", sans-serif;
+    font-style: normal;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+    position: absolute;
+    left: 3%;
+}
+
+.menu {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    display: flex;
+    gap: 10px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+}
+
+.menu a:visited {
+    color: #fff;
+    text-decoration: none; 
+}
+
+.menu a:hover {
+    color: #9B9FAC;
+    text-decoration: none;
+}
+
+.menu a:active {
+    color: #fff;
+}
+
+body {
+    background-color: black;
+    font-family: Inter;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Often asked Questions section */
+.questions-section {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-items: center;
+    top: 120px;
+    margin-left: 20%;
+}
+
+h1 { /* Often asked questions */
+    font-family: "Inter", sans-serif;
+    color: #BEC5CC;
+    font-size: 20px;
+    margin-bottom: 60px;
+    font-weight: 600;
+}
+
+.find-movie-question {
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.bought-question {
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Info About Square Eyes */
+.email-info-section {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-items: center;
+    top: 170px;
+    margin-left: 20%;
+}
+
+h2 { /* Email Contact@Squareeyes.com */ 
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 100;
+    margin-bottom: 35px;
+}
+
+.email-highlight {
+    font-weight: 400;
+}
+
+.driven-by-text {
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.inc-text {
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.inc-highlight {
+    font-weight: 300;
+}
+
+.adress-text {
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 35px;
+}
+
+/* Square Eyes Contact Form */ 
+.section-container {
+    display: flex;
+    justify-content: flex-end;
+    position: static;
+}
+
+.right-section {
+    border: 0.5px solid #5E5656;
+    background-color: #05080F;
+    border-radius: 15px;
+    padding: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
+    position: relative;
+    bottom: 370px;
+    right: 10%;   
+}
+
+h3 { /* Contact us */
+    font-family: "Inter", sans-serif;
+    color: #BEC5CC;
+    font-size: 20px;
+}
+
+.feedback-text{
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.feedback-name-boxes {
+    display: flex;
+    gap: 15px;
+}
+
+.input-firstname, .input-lastname {
+    border-radius: 10px;
+    background-color: #4E4E5E;
+    opacity: 50%;
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 50px;
+    border: 2px solid transparent;
+}
+
+.email-box {
+    display: flex;
+    position: relative;
+    top: 15px;
+}
+
+.input-email {
+    border-radius: 10px;
+    background-color: #4E4E5E;
+    opacity: 50%;
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 270px;
+    border: 2px solid transparent;
+}  
+
+.input-text-box {
+    display: flex;
+    position: relative;
+    top: 30px;
+}
+
+.input-text {
+    border-radius: 10px;
+    background-color: #4E4E5E;
+    opacity: 50%;
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 270px;
+    padding-bottom: 200px;
+    border: 2px solid transparent;
+}
+
+.cta {
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    padding: 5px 20px;
+    background-color: black;
+    border-color: #fff;
+    border-radius: 9px;
+    border: solid 1px;
+    font-size: 13px;
+    position: relative;
+    top: 50px;
+    margin-bottom: 40px;
+  }
+
+.cta:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+footer {
+    background-color: #03031d;
+    height: 30px;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+/* Social Media Icons */
+.fa-instagram {
+    color: #fff;
+    opacity: 47%;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.fa-x-twitter {
+    color: #fff;
+    opacity: 47%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.fa-youtube {
+    color: #fff;
+    opacity: 47%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.fa-tiktok {
+    color: #fff;
+    opacity: 47%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Headings for structure */
+.terms_text h4,
+.all_rights_text h4 {
+    display: none;
+}
+
+.terms_text {
+    color: #fff;
+    opacity: 47%;
+    font-size: 10px; 
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    gap: 15px;
+    left: 36%;
+}
+
+.terms {
+    text-decoration: none;
+    white-space: nowrap; 
+    display: flex; 
+}
+
+.terms:visited {
+    color: #fff;
+    opacity: 47%;
+    text-decoration: none; 
+}
+
+.all_rights_text {
+    text-decoration: none;
+    white-space: nowrap; 
+    display: flex; 
+    color: #fff;
+    opacity: 47%;
+    font-size: 10px; 
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 82%;
+    max-width: 100vw;
+}
+
+/* Smaller Screens */
+
+@Media (max-width: 1180px) and (min-width: 757px)  {
+
+    .logo {
+        font-size: 18px;
+        margin-right: 80px;
+    }
+
+    h1, 
+    .find-movie-question,
+    .bought-question {
+        position: relative;
+        right: 40%;
+    }
+
+    h2, 
+    .email-info-section,
+    .driven-by-text,
+    .inc-text,
+    .adress-text {
+        position: relative;
+        right: 55px;
+    }
+
+}
+
+@Media (max-width: 757px) and (min-width: 570px) {
+
+    /* Header */
+    .logo {
+        font-size: 18px;
+        margin-right: 80px;
+ 
+    }
+
+    .menu {
+        font-size: 12px;
+        gap: 30px;
+        margin-left: 40px;
+    }
+
+    .right-section {
+        position: relative;
+        bottom: 60px;
+        right: 0%;
+        padding-left: 90px;
+        padding-right: 90px;
+
+    }
+
+    h1, 
+    .find-movie-question,
+    .bought-question {
+        position: relative;
+        right: 50px;
+        bottom: 31px;
+    }
+
+    h1 {
+        margin-bottom: 70px;
+    }
+
+    h2, 
+    .email-info-section,
+    .driven-by-text,
+    .inc-text,
+    .adress-text {
+        position: relative;
+        left: 140px;  
+        top: -55px;
+    }
+
+    .adress-text {
+        line-height: 20px;
+        border-bottom: 0.5px solid #5E5656;
+    }
+
+    .bought-question {
+        border-bottom: 0.5px solid #5E5656;
+    }
+
+    /* Footer */
+    .terms_text {
+        display: none;
+    }
+
+    .all_rights_text {
+        position: absolute;
+        left: 60%;
+    }
+
+}
+
+/* Media Iphone 14 Pro Max and smaller tablets */ 
+@media (max-width: 570px) and (min-width: 430px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        width: 100%;
+    } 
+
+    .logo {
+        position: static;
+        font-size: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-right: 20px;
+    }
+
+    .menu {
+        font-size: 12px;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu ul {
+        gap: 0px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .questions-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        top: 40px;
+    }
+
+    h1 {
+        font-size: 18px;
+        margin-bottom: 40px;
+        position: relative;
+        right: 30px;
+    }
+
+    .find-movie-question,
+    .bought-question {
+        position: relative;
+        font-size: 15px;
+        margin-bottom: 30px;
+        right: 30px;
+    }
+
+    /* Info About Square Eyes */
+    .email-info-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    right: 45px;
+    top: 30px;
+    } 
+
+    .driven-by-text,
+    .inc-text {
+        position: relative;
+        left: 5px;
+    }
+
+    .adress-text {
+        position: relative;
+        left: 5px;
+        padding-bottom: 50px;
+        border-bottom: 1px solid #635D5D;
+    }
+
+    h2 {
+    font-size: 15px;
+    text-align: center;
+    }
+
+    /*Square Eyes Contact Form */
+    .section-container {
+        flex-direction: column;
+        position: relative;
+        margin-left: 90px;
+        position: relative;
+        top: 80px;
+        margin-bottom: 120px;
+    }
+
+    h3 { /* Contact us */
+        font-family: "Inter", sans-serif;
+        color: #BEC5CC;
+        font-size: 18px;
+        position: relative;
+        left: 35px;
+        top: 50px;
+    }
+
+    .feedback-text {
+        font-size: 10px;
+        padding: 35px;
+        margin-bottom: 0;
+    }
+
+    .feedback-name-boxes {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 0;
+    }
+    
+    .input-firstname, .input-lastname {
+        padding: 5px 7px;
+        max-width: 80%;
+        font-size: 14px;
+        box-sizing: border-box;
+        margin-left: 30px;
+    }
+    
+    .email-box {
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+        top: -20px;
+    }
+    
+    .input-email {
+        padding: 5px 7px;
+        max-width: 80%;
+        font-size: 14px;
+        box-sizing: border-box;
+        margin-top: 10px;
+        margin-left: 30px;
+    }  
+    
+    .input-text-box {
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+        top: -20px;
+    }
+    
+    .input-text {
+        padding: 5px 7px;
+        max-width: 80%;
+        font-size: 14px;
+        box-sizing: border-box;
+        padding-bottom: 100px;
+        margin-top: 10px;
+        margin-left: 30px;
+    }
+    
+
+    .right-section {
+        width: 90%;
+        justify-content: center;
+        padding: 0;
+        bottom: 0;
+    }
+
+    .feedback-name-boxes {
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+        bottom: 20px
+    }
+
+    .input-email,
+    .input-text {
+        padding-right: 10px;
+    }
+
+    .cta {
+        position: relative;
+        top: 0px;
+        left: 30px;
+    }
+
+    .footer {
+        position: relative;
+    }
+
+    .fa-instagram, 
+    .fa-x-twitter,
+    .fa-youtube,
+    .fa-tiktok {
+        padding: 5px;
+    }
+
+    .terms_text {
+        display: none;
+    }
+
+    .all_rights_text {
+        font-size: 10px;
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        left: 45%;
+    }
+
+    .terms {
+        text-decoration: none;
+    }
+}

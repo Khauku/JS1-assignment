@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Checkout proccess for Toy Story">
+    <title>Checkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Koulen&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d10e164dbb.js" crossorigin="anonymous"></script>
+    <link href="css/checkout.css" rel="stylesheet">
+</head>
+<body>
+    <!--Square Eyes Logo - Menu-->
+    <header>
+        <a href="index.html" class="logo">Square Eyes</a>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="movies.html">Movies</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="contact.html">Contact</a></li>  
+        </ul>
+    </nav>
+    </header>
+    <main>
+     <!--Toy Story Checkout Cart-->
+     <section class="grid-container"> 
+           <div class="left-column"> 
+             <h1>Confirm your purchase</h1>
+             <img src="images/toystory-cover.jpeg" alt="Toy Story Cover" class="toystory-cover1">
+             <h2>Toy Story</h2>
+            <div class="res-icons">
+                <img src="images/4k.jpg" alt="4K Icon" class="fk">
+                <img src="images/hd.jpg" alt="HD Icon" class="hd">
+            </div>
+             <div class="info">
+               <p>Animation</p> 
+               <p>1995</p>
+               <p>1h 20m</p>
+             </div>
+            <!--Payment Methods--> 
+              <h3>Payment methods:</h3>
+            <div class="card-icons">
+                <img src="images/paypal.png" alt="Paypal" class="paypal">
+                <img src="images/card.png" alt="Card 1" class="card">
+                <img src="images/card2.png" alt="Card 2" class="card2">
+            </div>
+            <!--Credit Card Checkout Form-->
+            <h4>Credit card:</h4>
+            <form class="checkout-form">
+                <div class="first-last-name-boxes">            
+                  <input type="text" id="first-name" class="input-firstname" name="first_name" placeholder="First name">
+                  <input type="text" id="last-name" class="input-lastname" name="last_name" placeholder="Last name">
+                </div>
+                <div class="cardnumber-box">
+                <input type="text" id="card-number" class="input-card-number" name="card_number" placeholder="Card number"> 
+                </div>
+                <div class="date-security-boxes">
+                  <input type="text" id="expiry-date" class="input-expiry-date" name="expiry-date" placeholder="MM/YY">
+                  <input type="text" id="security-code" class="input-security-code" name="security_code" placeholder="Security code">
+                </div>
+            </form>
+            <div class="cta-position">
+                <button class="cta">Confirm payment</button>
+           </div> 
+         </div> 
+        </section>
+        <!--After Purchase Info-->
+         <section class="right-column-top">
+            <div class="square-logo">
+                <p>Square Eyes</p> 
+            </div>
+            <div class="after-purchase-text"> 
+                <h5>After Purchase</h5>         
+                <p>After purchase is complete your<br>movie will be available to watch<br>under your profile.</p>
+            </div>
+         </section>
+         <!--After Purchase Terms-->
+         <section class="right-column-bottom">
+            <div class="digital-delivery">
+                <h6>Digital Delivery</h6>
+            </div>
+            <div class="delivery-text">  
+                <p>Movies will be delivered digitally through our platform via streaming,<br> You may access the movie via the internet.</p>
+            </div>  
+            <div class="purchase-rights"> 
+                <h6>Purchase Rights</h6>
+            </div>
+            <div class="purchase-text">
+                <p>Upon successful purchase of a movie, you are granted<br>  
+                non-exclusive, non-transferable right to view the movie for<br> personal, non-commercial use. This Agreement does not transfer<br> any ownership or intellectual property rights to you. The movie<br> remains the property of its respective rights holder.</p>
+            </div>
+            <div class="terms-refund-text">
+                <p>Read the <span class="highlight-terms">Terms of Sale</span> and <span class="highlight-refund">Refund Policy</span> before purchasing.</p>
+            </div>
+         </section>
+    </main>
+<footer>     
+    <!--Social Media Icons-->  
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-x-twitter"></i>
+    <i class="fa-brands fa-youtube"></i>
+    <i class="fa-brands fa-tiktok"></i>
+  <!--Terms text-->
+    <section class="terms_text">
+        <h6>Legal terms</h6>
+       <a href="index.html" class="terms">Customize cookies</a>
+       <a href="index.html" class="terms">Terms of use</a>
+       <a href="index.html" class="terms">Guidelines for privacy</a>
+    </section>
+    <section class="all_rights_text">
+        <h6>All rights Resereved</h6>
+        <p>© 2024 Square Eyes Inc. All Rights Reserved.</p>
+     </section>
+</footer>
+</body>
+</html>
