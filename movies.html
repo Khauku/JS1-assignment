@@ -14,6 +14,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Koulen&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/d10e164dbb.js" crossorigin="anonymous"></script>
         <link href="css/movies.css" rel="stylesheet">
+        <link href="css/basket.css" rel="stylesheet">
+        <link href="css/menu.css" rel="stylesheet">
 </head>
 <body>
     <!--Square Eyes Logo - Menu-->
@@ -27,6 +29,17 @@
             <li><a href="contact.html">Contact</a></li>  
         </ul>
     </nav>
+    <div class="basket-container">
+        <button id="basket-toggle" class="basket-button" aria-expanded="false" aria-controls="basket-dropdown">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="basket-count">0</span>
+        </button>
+
+        <div class="basket-dropdown" id="basket-dropdown" style="display: none;">
+            <ul id="basket-list" class="basket-list"></ul>
+            <button id="checkout-btn">Checkout</button>
+        </div>
+    </div>
     </header>
     <main>
         <!--Search bar-->
@@ -35,24 +48,10 @@
             <i class="fa-solid fa-magnifying-glass"></i>
         </div>
         <!--Movie scroll number 1-->
-        <section class="section_movie_container">
-            <div class="movie_categories">
-              <h1>Featured movies:</h1>
-            </div>
-             <div class="movie-scroll-container">
-              <div class="movie_covers">
-                 <img src="images/hollywood-cover.jpeg" alt="Once Upon A Time in Hollywood Cover" class="movie_hover">
-                 <img src="images/batman-cover.jpg" alt="Batman" class="movie_hover">
-                 <img src="images/sweetheart-cover.jpeg" alt="Sweetheart" class="movie_hover">
-                  <a href="toystory.html">
-                     <img src="images/toystory-cover.jpeg" alt="Toy Story" class="movie_hover">
-                  </a>
-                 <img src="images/godzilla-cover.jpeg" alt="Godzilla" class="movie_hover">
-                 <img src="images/addams-cover.jpeg" alt="The Addams Family" class="movie_hover">
-                 <img src="images/scream-cover.jpeg" alt="Scream" class="movie_hover">
-                 <img src="images/hobbs&shaw-cover.jpg" alt="Hobbs&Shaw" class="movie_hover">
-              </div>
-            </div>
+        <section class="featured-movies">
+            <h1>Featured movies:</h1>
+            <!--API Movies-->
+            <div id= "api-movie-container"></div>
         </section>
         <!--Movie scroll number 2-->
         <section class="movie-scroll-container-2">
@@ -89,5 +88,7 @@
             <p>© 2024 Square Eyes Inc. All Rights Reserved.</p>
          </section>
     </footer>
+    <!--Javascript files-->
+    <script src="js/script.js"></script>
 </body>
 </html>

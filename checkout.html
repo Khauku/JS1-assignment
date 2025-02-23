@@ -29,21 +29,19 @@
     </nav>
     </header>
     <main>
-     <!--Toy Story Checkout Cart-->
-     <section class="grid-container"> 
+     <!--Checkout Cart-->
+     <section glass="grid-container">
            <div class="left-column"> 
              <h1>Confirm your purchase</h1>
-             <img src="images/toystory-cover.jpeg" alt="Toy Story Cover" class="toystory-cover1">
-             <h2>Toy Story</h2>
+             <img id="movie-poster" src="" alt="Movie Cover" class="movie-cover">
+             <h2 id="movie-title"></h2>
+             <p id="movie-price"></p>
+            </div>
             <div class="res-icons">
                 <img src="images/4k.jpg" alt="4K Icon" class="fk">
                 <img src="images/hd.jpg" alt="HD Icon" class="hd">
             </div>
-             <div class="info">
-               <p>Animation</p> 
-               <p>1995</p>
-               <p>1h 20m</p>
-             </div>
+            <div id="loading-indicator" style="display:none;">Loading...</div>
             <!--Payment Methods--> 
               <h3>Payment methods:</h3>
             <div class="card-icons">
@@ -67,10 +65,10 @@
                 </div>
             </form>
             <div class="cta-position">
-                <button class="cta">Confirm payment</button>
+                <button id="checkout-btn" class="cta">Confirm payment</button>
            </div> 
          </div> 
-        </section>
+    </section>
         <!--After Purchase Info-->
          <section class="right-column-top">
             <div class="square-logo">
@@ -119,5 +117,6 @@
         <p>© 2024 Square Eyes Inc. All Rights Reserved.</p>
      </section>
 </footer>
+<script src="js/script.js"></script>
 </body>
 </html>

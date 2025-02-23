@@ -65,7 +65,6 @@ header {
 body {
     background-color: black;
     font-family: Inter;
-    overflow-x: hidden;
 }
 
 /* Toy Story Checkout Cart */
@@ -86,14 +85,9 @@ body {
     grid-area: left-column;
     display: flex;
     flex-direction: column;
-    border: 0.5px solid #5E5656;
     background-color: #000;
     border-radius: 15px;
-    width: 500px;
-    height: 642px;
-    position: absolute;
-    left: 10%;
-    top: 138px;
+    position: relative;
 }
 
 h1 { /* Confirm your purchase */ 
@@ -106,15 +100,10 @@ h1 { /* Confirm your purchase */
     left: 100px;
 }
 
-.toystory-cover1 {
-    height: 100px;
-    width: 70px;
-    border-radius: 30px;
-    display: flex;
-    margin: 0;
-    position: relative;
-    left: 100px;
-    top: 70px;
+#movie-poster {
+    height: auto;
+    max-width: 100%;
+    border: 15px;
 }
 
 h2 { /* Toy Story Title */
@@ -297,11 +286,9 @@ h4 { /* Credit Card text */
 
 .cta-position {
     position: relative;
-    top: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
-    right: 95px;
     
 }
 

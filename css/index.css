@@ -5,61 +5,79 @@ header {
     padding: 0 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    overflow-x: hidden;
+    justify-content: space-between;
+    overflow-x: visible !important;
     box-sizing: border-box;
 }
 
-/* Square Eyes Logo - Menu */
-.logo {
-    font-family: "Koulen", sans-serif;
-    font-style: normal;
-    font-size: 25px;
-    color: #fff;
-    text-decoration: none;
-    white-space: nowrap;
-    position: absolute;
-    left: 3%;
-}
 
-.menu {
+/* Basket */
+
+body {
+    overflow-x: visible !important;
+    background-color: black;
+    font-family: Inter;
     font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    .container { display: flex; gap: 30px}
+    .movies { flex: 2; display: flex; flex-wrap: wrap; gap: 20px; }
+    .movie { border: 1px solid #ccc; padding: 10px; width: 200px; }
+}
+ 
+/* Welcome Image */
+.welcome {
+    background-image: url(../images/hollywood-info.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 70vh;
+    font-family: "Inter", sans-serif;
     font-size: 16px;
-    display: flex;
-    gap: 10px;
-    white-space: nowrap;
-    overflow-x: hidden;
-    box-sizing: border-box;
+    font-style: normal;
+    color: #fff;
+    position: relative;
 }
 
-.menu ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-    gap: 30px;
+.welcome h1 {
+    position: absolute;
+    padding-top: 260px;
+    left: 40px;
+    font-weight: 300;
 }
 
-.menu a {
+.highlight {
+    color: #D8D063;
+}
+
+.img_source {
+    font-size: 9px;
+    color: #EDE2E2;
+    opacity: 60%;
+    position: absolute;
+    bottom: 0px;
+    top: 93%;
+    left: 90%;
+}
+
+.cta {
+    color: #fff;
+    padding: 7px 15px;
+    background-color: black;
+    border-color: #fff;
+    text-transform: uppercase;
+    position: relative;
     text-decoration: none;
-    color: #fff;
-    padding: 10px;
-}
+    border-radius: 12px;
+    border: solid 1px;
+    font-size: 13px;
+    gap: 15px;
+    top: 360px;
+    left: 37px;
+    margin-right: 10px;
+  }
 
-.menu a:visited {
-    color: #fff;
-    text-decoration: none; 
-}
-
-.menu a:hover {
-    color: #9B9FAC;
-    text-decoration: none;
-}
-
-.menu a:active {
-    color: #fff;
+  .cta:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
 }
 
 /* Search Bar */
@@ -68,9 +86,11 @@ header {
     padding-left: 30px;
     border-radius: 15px;
     border: 2px solid transparent;
-    background-color: #20253E;
+    background-color: #192035;
     position: absolute;
     opacity: 50%;   
+    color: #DDD4D4;
+    z-index: 1;
 }
 
 .search_bar:focus {
@@ -83,11 +103,6 @@ header {
     justify-content: center;
     width: 100%;
     padding-top: 10px;
-    padding-left: 20px;
-    margin-top: 33px;
-    margin-bottom: 70px;
-    overflow-x: hidden;
-    box-sizing: border-box;
 }
 
 .fa-magnifying-glass {
@@ -95,70 +110,126 @@ header {
     padding-top: 15px;
     padding-left: 450px;
     justify-content: center;
-    align-items: center;
+    position: absolute;
 }
 
-body {
-    background-color: black;
-    font-family: "Inter", sans-serif;
-    overflow-x: hidden;
-}
-
-/* Movie scroll containers */
-/* Feautered and Acadamy Award movie headings */
-.movie_categories {
+/* API Movies */
+.top-movies {
     font-family: "Koulen", sans-serif;
-    color: #DDD4D4;
-    padding-left: 35px;
-}
-
-.movie_categories h1, .movie_categories h2 {
     font-style: normal;
-    font-size: 18px;
-    font-weight: 300;
-    padding-right: 10px;
-    margin-bottom: 0px;
-} 
-
-.movie-scroll-container {
-    background-color: #000;
-    overflow: auto;
+    font-size: 15px;
+    color: #DDD4D4;
+    text-transform: uppercase;
+    padding-left: 40px;
     white-space: nowrap;
-    padding: 20px;
-    padding-top: 0px;
+    margin-bottom: 0;
+
 }
 
-.movie-scroll-container-2 {
+.movie {
     display: flex;
-    flex-direction: column;
-    margin: 100px auto;
-    border-top: 1px solid #635D5D;
-    max-width:100%;
-    padding: 50px 10px;
-    overflow-x: hidden;
-    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-.movie_covers img {
+.movie h3 {
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+
+#api-movie-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    background-color: #000;
+    margin-top: -20px;
+    margin-left: -40px;
+}
+
+#api-movie-container .movie {
+    display: inline-block;
     border-radius: 11%;
-    width: 230px;
-    height: 340px; 
-    position: relative;  
-    margin: 20px;   
-    margin-left: 0;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    box-sizing: border-box;
+    margin: 20px;
+    margin-bottom: 30px;
     border: 2px solid transparent;
 }
 
-.movie_hover:hover {
-    transform: scale(1.02);
-    background-color: transparent;
-    border-color: #fff;
+#api-movie-container .movie img {
+    width: 230px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: inherit;
 }
 
-/* Footer */ 
+#api-movie-container .movie h2 {
+    font-size: 15px;
+    text-align: center;
+}
+
+.movie-wrapper {
+    position: relative;
+    display: inline-block;
+    overflow-x: hidden;
+    border-radius: 11%;
+    width: 230px;
+    height: 340px;
+}
+
+.movie-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.movie-wrapper:hover .movie-image {
+    opacity: 0.4;
+}
+
+.movie-wrapper:hover .movie-overlay {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.movie-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.info-btn, .add-btn {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.info-btn:hover, .add-btn:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+
+
 footer {
     background-color: #03031d;
     height: 30px;
@@ -214,7 +285,7 @@ footer {
     justify-content: center;
     position: absolute;
     gap: 15px;
-    left: 36%;
+    left: 40%;
 }
 
 .terms {
@@ -228,6 +299,7 @@ footer {
     opacity: 47%;
     text-decoration: none; 
 }
+
 
 .all_rights_text {
     text-decoration: none;
@@ -258,13 +330,13 @@ footer {
     }
 
     .logo {
-        font-size: 18px;
         margin-right: 80px;
+        font-size: 18px;
     }
 
 }
 
-@Media (max-width: 757px) {
+@Media (max-width: 757px) and (min-width: 570px) {
 
     .logo {
         font-size: 18px;
@@ -283,7 +355,7 @@ footer {
 
     .all_rights_text {
         position: absolute;
-        left: 60%;
+        left: 65%;
     }
 
 }
@@ -306,7 +378,7 @@ footer {
 
     .all_rights_text {
         position: absolute;
-        left: 55%;
+        left: 65%;
     }
 
      /* Search Bar */
@@ -319,6 +391,18 @@ footer {
         position: relative;
         right: 40px;
         bottom: 4px;
+    }
+
+    .cta {
+        font-size: 12px;
+        position: relative;
+        top: 430px;
+    }
+
+
+
+    .welcome h1 {
+        font-size: 20px;
     }
 
 }
@@ -339,7 +423,6 @@ footer {
         margin-left: 10px;
         margin-right: 10px;
         padding-right: 20px;
-        white-space: nowrap;
     }
 
     .menu {
@@ -350,6 +433,7 @@ footer {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
+        padding-left: 5px;
     }
 
     .menu ul {
@@ -371,14 +455,43 @@ footer {
         padding-bottom: 15px;
     }
 
+    /* Welcome */
+    .welcome {
+        min-height: 45vh;
+        background-size: cover;
+        background-position: 20%;
+        overflow-x: hidden;
+    }
+
+    .welcome h1 {
+        font-size: 15px;
+        top: 300px;
+        left: 10px;
+    }
+
+    .img_source {
+        font-size: 7px;
+        opacity: 40%;
+        position: absolute;
+    }
+
+    .cta {
+        font-size: 10px;
+        top: auto;
+        left: auto;
+        position: relative;
+        top: 360px;
+        left: 10px;
+    }
+
+    .movie-scroll-container {
+        margin-bottom: 50px;
+    }
+
     .body {
         display: flex;
         height: 200%;
         width: 100%;
-    }
-    
-    .movie-scroll-container-2 {
-        margin-bottom: 20px;
     }
 
     .footer {
@@ -407,4 +520,5 @@ footer {
     .terms {
         text-decoration: none;
     }
+
     }

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A page where you can browse and buy movies">
     <title>Square Eyes</title>
+    <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
@@ -13,7 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Koulen&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d10e164dbb.js" crossorigin="anonymous"></script>  
+    <!--Stylesheet-->
     <link href="css/index.css" rel="stylesheet">
+    <link href="css/basket.css" rel="stylesheet">
+    <link href="css/menu.css" rel="stylesheet">
 </head>
 
 <body>
@@ -28,6 +31,17 @@
             <li><a href="contact.html">Contact</a></li>  
         </ul>
     </nav>
+    <div class="basket-container">
+        <button id="basket-toggle" class="basket-button" aria-expanded="false" aria-controls="basket-dropdown">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="basket-count">0</span>
+        </button>
+
+        <div class="basket-dropdown" id="basket-dropdown" style="display: none;">
+            <ul id="basket-list" class="basket-list"></ul>
+            <button id="checkout-btn">Checkout</button>
+        </div>
+    </div>
 </header>
     <!--Welcome Image-->
      <main>
@@ -41,28 +55,16 @@
             </div>
             <!--Search Bar-->
             <div class="search_bar_position">
-              <input type="text" class="search_bar" placeholder="Search for movies">
+              <input type="text" id="search-bar" name="search" class="search_bar" placeholder="Search for movies">
               <i class="fa-solid fa-magnifying-glass"></i>
             </div>
         </section>
-        <!--Top Movie Scroll-->
+        <!--Top Movies-->
         <section class="top-movies">
             <h2>top movies this month:</h2>
+            <!--API Movies-->
+            <div id= "api-movie-container"></div>
         </section>
-        <div class="movie-scroll-container">
-            <div class="top-movies_images">
-             <img src="images/lorem-cover.jpg" alt="Lorem" class="movie_hover">
-             <img src="images/batman-cover.jpg" alt="Batman" class="movie_hover">
-             <img src="images/boy-cover.jpg" alt="The Boy" class="movie_hover">
-             <img src="images/sweetheart-cover.jpeg" alt="Sweetheart" class="movie_hover">
-             <img src="images/godzilla-cover.jpeg" alt="Godzilla Cover" class="movie_hover">
-             <img src="images/hollywood-cover.jpeg" alt="Once Upon A Time in Hollywood Cover" class="movie_hover">
-             <a href="toystory.html">
-                <img src="images/toystory-cover.jpeg" alt="Toy Story" class="movie_hover">
-             </a>
-             <img src="images/addams-cover.jpeg" alt="The Addams Family" class="movie_hover">
-            </div>
-        </div>
      </main>
      <footer>     
         <!--Social Media Icons-->  
@@ -82,5 +84,7 @@
             <p>© 2024 Square Eyes Inc. All Rights Reserved.</p>
          </section>
     </footer>
+    <!--Javascript files-->
+    <script src="js/script.js"></script>
 </body>
 </html>
