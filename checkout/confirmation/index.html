@@ -14,23 +14,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Koulen&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d10e164dbb.js" crossorigin="anonymous"></script>  
     <!--Stylesheet-->
-    <link href="css/index.css" rel="stylesheet">
-    <link href="css/shared/basket.css" rel="stylesheet">
-    <link href="css/shared/menu.css" rel="stylesheet">
-    <link href="css/shared/footer.css" rel="stylesheet">
-    <link href="css/shared/api-movies.css" rel="stylesheet">
-    <link href="css/shared/toast.css" rel="stylesheet">
+    <link href="../../css/confirmation.css" rel="stylesheet">
+    <link href="../../css/shared/basket.css" rel="stylesheet">
+    <link href="../../css/shared/menu.css" rel="stylesheet">
+    <link href="../../css/shared/footer.css" rel="stylesheet">
 </head>
 <body>
- <!--Square Eyes Logo - Menu-->
 <header> 
-    <a href="index.html" class="logo">Square Eyes</a>
+    <a href="../../index.html" class="logo">Square Eyes</a>
     <nav class="menu">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="browse.html">Movies</a></li>
-            <li><a href="aboutus.html">About us</a></li>
-            <li><a href="contact.html">Contact</a></li>  
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../browse.html">Movies</a></li>
+            <li><a href="../../aboutus.html">About us</a></li>
+            <li><a href="../../contact.html">Contact</a></li>  
         </ul>
     </nav>
     <button class="menu-toggle" aria-label="Toggle menu">
@@ -48,27 +45,14 @@
         </div>
     </div>
 </header>
-    <!--Welcome Image-->
-     <main>
-        <section class="welcome">
-            <!--Welcome text and CTA buttons-->
-            <div>
-            <h1>Purchase <span class="highlight">High-Quality</span> movies<br>directly from the people who make them.</h1>
-            <a href="browse.html" class="cta">Browse Movies</a>
-                <button class="cta">Sign Up</button>
-                <p class="img_source">Picture from Shotdeck.com</p>
-            </div>
-            <!--Search Bar-->
-            <div class="search_bar_position">
-              <input type="text" id="search-bar" name="search" class="search_bar" placeholder="Search for movies">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-        </section>
-        <!--Top Movies-->
-        <section class="top-movies">
-            <h2>top movies this month:</h2>
-            <!--API Movies-->
-            <div id= "api-movie-container"></div>
+    
+     <main class="confirmation-main">
+        <section class="confirmation-box">
+            <h1>Thank you for your purchase!</h1>
+            <img id="confirmation-cover" src="#" alt="Movie cover"/>
+            <h2 id="confirmation-title">Movie Title</h2>
+            <p>You can now access the movie in your account's library. A detailed receipt has been sent to your email for your reference. Should you have any questions or need assistance, feel free to contact our support team</p>
+            <a class="cta-watch" href ="../../index.html">Watch now</a>
         </section>
      </main>
      <footer>     
@@ -80,9 +64,9 @@
         <section class="terms_text">
             <!--Terms text-->
             <h3>Legal terms</h3>
-            <a href="index.html" class="terms">Customize cookies</a>
-            <a href="index.html" class="terms">Terms of use</a>
-            <a href="index.html" class="terms">Guidelines for privacy</a>
+            <a href="../../index.html" class="terms">Customize cookies</a>
+            <a href="../../index.html" class="terms">Terms of use</a>
+            <a href="../../index.html" class="terms">Guidelines for privacy</a>
         </section>
         <section class="all_rights_text">
             <h3>All rights Resereved</h3>
@@ -90,10 +74,9 @@
          </section>
     </footer>
     <!--Javascript files-->
-    <script type="module" src="js/index.js"></script>
-    <script type="module" src="js/basket.js"></script>
-    <script src="js/menu.js"></script>   
-    <!--Pop up message - added to basket-->
-    <div id="toast" class="toast">Movie added to basket</div>
+    <script type="module" src="../../js/index.js"></script>
+    <script type="module" src="../../js/basket.js"></script>
+    <script type="module" src="../../js/confirmation.js"></script>
+    <script src="../../js/menu.js"></script>   
 </body>
 </html>

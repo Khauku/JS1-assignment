@@ -1,73 +1,46 @@
-header {
-    background-color: #09031D;
-    height: 70px;
-    width: 100%;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow-x: hidden;
-    box-sizing: border-box;
-}
-
-/* Square Eyes Logo - Menu */
-.logo {
-    font-family: "Koulen", sans-serif;
-    font-style: normal;
-    font-size: 25px;
-    color: #fff;
-    text-decoration: none;
-    white-space: nowrap;
-    position: absolute;
-    left: 3%;
-}
-
-.menu {
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    display: flex;
-    gap: 10px;
-    white-space: nowrap;
-    overflow-x: hidden;
-    box-sizing: border-box;
-}
-
-.menu ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-    gap: 30px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #fff;
-    padding: 10px;
-}
-
-.menu a:visited {
-    color: #fff;
-    text-decoration: none; 
-}
-
-.menu a:hover {
-    color: #9B9FAC;
-    text-decoration: none;
-}
-
-.menu a:active {
-    color: #fff;
-}
 
 body {
     background-color: black;
     font-family: Inter;
+    overflow-x: visible !important;
 }
 
-/* Toy Story Checkout Cart */
+/* API Movies */
+
+.checkout-movie-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    top: 80px;
+    left: 100px;
+}
+
+.checkout-movie-info img {
+    width: 70px;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.movie-text-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #fff;
+}
+
+/* price */
+.checkout-meta {
+    font-size: 14px;
+    color: #fff;
+    position: relative;
+    margin-top: 0;
+    padding-bottom: 60px;
+}
+
 .grid-container {
     display: grid;
     grid-auto-flow: column;
@@ -85,9 +58,44 @@ body {
     grid-area: left-column;
     display: flex;
     flex-direction: column;
+    border: 0.5px solid #5E5656;
+    background-color: #000;
+    border-radius: 15px;
+    width: 500px;
+    height: 642px;
+    position: absolute;
+    left: 10%;
+    top: 138px;
+}
+
+.right-column-top {
+    grid-area: right-column-top;
+    align-items: center;
+    border: 0.5px solid #5E5656;
+    border-radius: 15px;
+    max-width: 450px;
+    max-height: 250px;
+    margin: 70px;
+    padding: 10px 20px 30px;
+    background-color: #000;
+    position: relative;
+    left: 600px;
+    bottom: 30px;
+}
+
+.right-column-bottom {
+    grid-area: right-column-bottom;
+    display: flex;
+    flex-direction: column;
+    max-width: 470px;
+    max-height: 320px;
+    padding: 50px 10px 55px;
+    border: 0.5px solid #5E5656;
     background-color: #000;
     border-radius: 15px;
     position: relative;
+    left: 670px;
+    bottom: 70px;
 }
 
 h1 { /* Confirm your purchase */ 
@@ -98,70 +106,18 @@ h1 { /* Confirm your purchase */
     position: relative;
     top: 60px;
     left: 100px;
+    margin-bottom: 0;
 }
 
-#movie-poster {
-    height: auto;
-    max-width: 100%;
-    border: 15px;
-}
-
-h2 { /* Toy Story Title */
+h2 { /* Movie Title */
     font-family: "Koulen", sans-serif;
     font-size: 18px;
-    color: #D8D063;
+    color: #fff;
     position: relative;
-    bottom: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    right: 38px;
-
-}
-
-.res-icons { /* resolution icons */
-    display: flex;
-    gap: 0px;
-    position: relative;
-    bottom: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    right: 50px;
-}
-
-.hd {
-    width: 15px;
-    height: 15px;
-    border-radius: 6px;
-    border: solid 1px;
-    border-color: #fff;
-    opacity: 60%;
-}
-
-.fk {
-    width: 15px;
-    height: 15px;
-    border-radius: 1px;
-    border-radius: 6px;
-    border: solid 1px;
-    border-color: #fff;
-    opacity: 60%;
-    margin-right: 5px;
-}
-
-.info { /* Animation - Duration - published year */
-    font-family: "Inter", sans-serif;
-    font-size: 10px;
-    font-weight: 400;
-    color: #fff; 
-    opacity: 46%;
-    display: flex;
-    white-space: nowrap;
-    gap: 15px;
-    position: relative;;
-    left: 180px;
-    bottom: 55px;
+    margin-bottom: 0;
 }
 
 /* Payment Methods */
@@ -172,7 +128,7 @@ h3 { /* Payment Methods */
     color: #fff; 
     position: relative;
     left: 95px;
-    top: 15px;;
+    margin-top: 80px;
 }
 
 .card-icons { 
@@ -277,37 +233,26 @@ h4 { /* Credit Card text */
     border-radius: 9px;
     border: solid 1px;
     font-size: 13px;
+    text-decoration: none;
   }
 
 .cta:hover {
     background-color: #fff;
     color: #000;
+    text-decoration: none;
 }
 
 .cta-position {
     position: relative;
+    top: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
+    right: 95px;
     
 }
 
 /* After Purchase Info */
-.right-column-top {
-    grid-area: right-column-top;
-    align-items: center;
-    border: 0.5px solid #5E5656;
-    border-radius: 15px;
-    width: 450px;
-    height: 250px;
-    margin: 70px;
-    padding: 20px;
-    background-color: #000;
-    position: relative;
-    left: 600px;
-    bottom: 30px;
-}
-
 .square-logo {
     font-family: "Koulen", sans-serif;
     font-style: normal;
@@ -349,21 +294,6 @@ h5 { /* After Purchase*/
 }
 
 /* After Purchase Terms */
-.right-column-bottom {
-    grid-area: right-column-bottom;
-    display: flex;
-    flex-direction: column;
-    width: 470px;
-    height: 320px;
-    padding-left: 20px;
-    border: 0.5px solid #5E5656;
-    background-color: #000;
-    border-radius: 15px;
-    position: relative;
-    left: 670px;
-    bottom: 70px;
-}
-
 .digital-delivery h6 {
     font-family: "Inter", sans-serif;
     font-weight: 300;
@@ -433,90 +363,6 @@ h5 { /* After Purchase*/
     font-style: normal;
 }
 
-footer {
-    background-color: #03031d;
-    height: 30px;
-    width: 100%;
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-}
-
-/* Social media icons */
-.fa-instagram {
-    color: #fff;
-    opacity: 47%;
-    padding-left: 20px;
-    padding-right: 10px;
-}
-
-.fa-x-twitter {
-    color: #fff;
-    opacity: 47%;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.fa-youtube {
-    color: #fff;
-    opacity: 47%;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.fa-tiktok {
-    color: #fff;
-    opacity: 47%;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-/* headings for structure */
-.all_rights_text h6,
-.terms_text h6 {
-    display: none;
-}
-
-.terms_text {
-    color: #fff;
-    opacity: 47%;
-    font-size: 10px; 
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding-left: 350px;
-}
-
-.terms {
-    text-decoration: none;
-    white-space: nowrap; 
-    display: flex; 
-}
-
-.terms:visited {
-    color: #fff;
-    opacity: 47%;
-    text-decoration: none; 
-}
-
-.all_rights_text {
-    text-decoration: none;
-    white-space: nowrap; 
-    display: flex; 
-    color: #fff;
-    opacity: 47%;
-    font-size: 10px; 
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: 82%;
-    max-width: 100vw;
-}
 
 @Media (max-width: 1180px) and (min-width: 757px)  {
 
@@ -529,32 +375,19 @@ footer {
     .left-column {
         position: relative;
         top: 10px;
-        left: 10px;
+        padding-left: 10px;
     }
 
     .right-column-top {
         position: relative;
-        padding: 10px;
-        bottom: 723px;
-        left: 480px;
+        left: 0%;
+        width: 100%;
     }
 
     .right-column-bottom {
         position: relative;
-        padding: 5px;
-        padding-right: 1px;
-        padding-bottom: 12px;
-        bottom: 765px;
-        left: 550px;
-    }
-
-    .all_rights_text {
-        position: absolute;
-        right: 10%;
-    }
-
-    .terms_text {
-        display: none;
+        left: 8%;
+        padding-right: 30px;
     }
 
     .logo {
@@ -570,11 +403,6 @@ footer {
         font-size: 18px;
         margin-right: 80px;
  
-    }
-
-    .menu {
-        font-size: 12px;
-        gap: 30px;
     }
 
     .grid-container {
@@ -604,27 +432,12 @@ footer {
         left: 30px;
     }
 
-    .terms_text {
-        display: none;
-    }
-
-    .all_rights_text {
-        position: absolute;
-        left: 65%;
-    }
-
 }
 
 @Media (max-width: 570px) and (min-width: 430px) {
 
     .logo {
         font-size: 15px;
-    }
-
-    .menu {
-        font-size: 12px;
-        gap: 30px;
-        margin-left: 80px;
     }
 
     .grid-container {
@@ -692,15 +505,6 @@ footer {
         position: relative;
         left: 60px;
     
-    }  
-
-    .terms_text {
-        display: none;
-    }
-
-    .all_rights_text {
-        position: absolute;
-        left: 65%;
     }   
 
 }
@@ -723,29 +527,13 @@ footer {
         padding-right: 20px;
     }
 
-    .menu {
-        font-size: 12px;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        padding-left: 5px;
-    }
-
-    .menu ul {
-        gap: 0px;
-        padding: 0;
-        margin: 0;
-    }
 
     body {
         overflow-x: hidden;
         box-sizing: border-box;
     }
 
-    /* Toy Story Checkout Cart */
+    /* Checkout Cart */
     .grid-container {
         display: grid;
         grid-auto-flow: row;
@@ -777,7 +565,7 @@ footer {
     }
 
     
-    h2 { /* Toy Story Title */
+    h2 { /* Title */
         display: flex;
         position: relative;
         align-items: center;
@@ -967,35 +755,4 @@ footer {
         position: relative;
         left: -15px;
     }
-
-    /* Footer */
-    .footer {
-        position: relative;
-        width: 100%;
-        max-width: 100vh;
-    }
-
-    .fa-instagram, 
-    .fa-x-twitter,
-    .fa-youtube,
-    .fa-tiktok {
-        padding: 5px;
-    }
-
-    .terms_text {
-        display: none;
-    }
-
-    .all_rights_text {
-        font-size: 10px;
-        display: flex;
-        position: absolute;
-        flex-direction: column;
-        left: 45%;
-    }
-
-    .terms {
-        text-decoration: none;
-    }
-
 }

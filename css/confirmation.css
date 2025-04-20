@@ -1,0 +1,83 @@
+body {
+    background-color: black;
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.confirmation-main {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.confirmation-box {
+    max-width: 500px;
+    text-align: center;
+    background-color: black;
+    border-radius: 10px;
+    padding: 40px 30px;
+}
+
+.confirmation-box h1 {
+    font-family: "Koulen", sans-serif;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+#confirmation-cover {
+    width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.confirmation-box h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.confirmation-box p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+.confirmation-box strong {
+    font-weight: 600;
+    color: #fff;
+}
+
+.cta-watch {
+    padding: 10px 20px;
+    border:  1px solid #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: "inter", sans-serif;
+    font-size: 12px;
+    background-color: transparent;
+    color: #fff;
+    transition: backround 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.cta-watch:hover {
+    background-color: #fff;
+    color: black !important;
+    font-weight: bold;
+}
+
+.cta-watch:visited,
+.cta-watch:link {
+    color: #fff;
+    text-decoration: none;
+}

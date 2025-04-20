@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Toystory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Koulen&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d10e164dbb.js" crossorigin="anonymous"></script>
+
+    <link href="../css/movie-details.css" rel="stylesheet">
+    <link href="../css/shared/basket.css" rel="stylesheet">
+    <link href="../css/shared/menu.css" rel="stylesheet">
+    <link href="../css/shared/footer.css" rel="stylesheet">
+    <link href="../css/shared/toast.css" rel="stylesheet">
+</head>
+<body>
+    <!--Square Eyes Logo - Menu-->
+    <header> 
+        <a href="../index.html" class="logo">Square Eyes</a>
+    <nav class="menu">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../browse.html">Movies</a></li>
+            <li><a href="../aboutus.html">About us</a></li>
+            <li><a href="../contact.html">Contact</a></li>  
+        </ul>
+    </nav>
+    <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="basket-container">
+        <button id="basket-toggle" class="basket-button" aria-expanded="false" aria-controls="basket-dropdown">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="basket-count">0</span>
+        </button>
+        <div class="basket-dropdown" id="basket-dropdown" style="display: none;">
+            <ul id="basket-list" class="basket-list"></ul>
+            <button id="checkout-btn">Checkout</button>
+        </div>
+    </div>
+    </header>
+    <main>
+        <!--Background image-->
+        <div class="welcome_image" id="product-image-banner"></div>
+        <!--Info About the Movie-->
+        <section class="movie_info_container">
+            <div class="movie_title">
+              <h1 id="product-title">Loading...</h1>
+            </div>
+            <div class="movie_info">
+                <p class="m_info" id="product-meta"></p>
+                <p class="m_info" id="product-rating"></p>
+            </div>
+        </section>
+            <div class="movie_about">
+                <h3 id="product-description">Loading descripition</h3>
+            </div>
+        <!--Price and Purchase Button-->
+         <div class="checkout">
+            <p id="product-price">Loading price...</p>
+           <a href="#" class="cta" id="add-to-cart-btn">Purchase</a>
+         </div>
+    </main>
+    <footer>      
+        <!--Social Media Icons--> 
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-tiktok"></i>
+        <!--Terms text-->
+        <section class="terms_text">
+            <h4>Legal terms</h4>
+           <a href="../index.html" class="terms">Customize cookies</a>
+           <a href="../index.html" class="terms">Terms of use</a>
+           <a href="../index.html" class="terms">Guidelines for privacy</a>
+        </section>
+        <section class="all_rights_text">
+            <h4>All rights Resereved</h4>
+            <p>© 2024 Square Eyes Inc. All Rights Reserved.</p>
+         </section>
+    </footer>
+    <script type="module" src="../js/movie-details.js"></script> 
+    <script type="module" src="../js/basket.js"></script> 
+    <script src="../js/menu.js"></script>  
+    <script type="module">
+        import { initBasketUI, redirectToCheckout } from "../js/basket.js";
+        initBasketUI();
+
+        const checkoutBtn = document.getElementById("checkout-btn");
+        if (checkoutBtn) {
+            checkoutBtn.addEventListener("click", redirectToCheckout);
+        }
+    </script>
+    <!--Pop up message - added to basket-->
+    <div id="toast" class="toast">Movie added to basket</div>
+</body>
+</html>

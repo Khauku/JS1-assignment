@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,9 +12,13 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Koulen&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/d10e164dbb.js" crossorigin="anonymous"></script>
-        <link href="css/movies.css" rel="stylesheet">
-        <link href="css/basket.css" rel="stylesheet">
-        <link href="css/menu.css" rel="stylesheet">
+        <link href="css/browse/browse.css" rel="stylesheet">
+        <link href="css/shared/basket.css" rel="stylesheet">
+        <link href="css/shared/menu.css" rel="stylesheet">
+        <link href="css/shared/footer.css" rel="stylesheet">
+        <link href="css/shared/api-movies.css" rel="stylesheet">
+        <link href="css/browse/filter.css" rel="stylesheet">
+        <link href="css/shared/toast.css" rel="stylesheet">
 </head>
 <body>
     <!--Square Eyes Logo - Menu-->
@@ -24,11 +27,14 @@
     <nav class="menu">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="movies.html">Movies</a></li>
+            <li><a href="browse.html">Movies</a></li>
             <li><a href="aboutus.html">About us</a></li>
             <li><a href="contact.html">Contact</a></li>  
         </ul>
     </nav>
+    <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
     <div class="basket-container">
         <button id="basket-toggle" class="basket-button" aria-expanded="false" aria-controls="basket-dropdown">
             <i class="fa-solid fa-cart-shopping"></i>
@@ -47,28 +53,20 @@
             <input type="text" class="search_bar" placeholder="Search for movies">
             <i class="fa-solid fa-magnifying-glass"></i>
         </div>
+        <nav class="genre-filter" aria-label="Genres">
+            <button data-genre="all" class="genre-btn active">All</button>
+            <button data-genre="action" class="genre-btn">Action</button>
+            <button data-genre="comedy" class="genre-btn">Comedy</button>
+            <button data-genre="drama" class="genre-btn">Drama</button>
+            <button data-genre="horror" class="genre-btn">Horror</button>
+            <button data-genre="kids" class="genre-btn">Kids</button>
+        </nav>
         <!--Movie scroll number 1-->
         <section class="featured-movies">
             <h1>Featured movies:</h1>
             <!--API Movies-->
             <div id= "api-movie-container"></div>
         </section>
-        <!--Movie scroll number 2-->
-        <section class="movie-scroll-container-2">
-            <div class="movie_categories">
-              <h2>Acadamy award winning movies:</h2>  
-            </div> 
-            <div class="movie-scroll-container">
-              <div class="movie_covers">
-                 <img src="images/lorem-cover.jpg" alt="Lorem" class="movie_hover">
-                 <img src="images/boy-cover.jpg" alt="Boy" class="movie_hover">
-                 <img src="images/moments-cover.jpg" alt="Moments" class="movie_hover">
-                 <img src="images/dark-cover.jpg" alt="Dark Path" class="movie_hover">
-                 <img src="images/orbita-cover.jpg" alt="Orbita" class="movie_hover">
-                 <img src="images/movienight-cover.jpg" alt="Movie Night" class="movie_hover">
-              </div>
-           </div>
-       </section>
     </main>
     <footer>  
         <!--Social Media Icons-->    
@@ -79,9 +77,9 @@
         <!--Terms text-->
         <section class="terms_text">
             <h3>Legal terms</h3>
-            <a href="index.html" class="terms">Customize cookies</a>
-            <a href="index.html" class="terms">Terms of use</a>
-            <a href="index.html" class="terms">Guidelines for privacy</a>
+            <a href="/index.html" class="terms">Customize cookies</a>
+            <a href="/index.html" class="terms">Terms of use</a>
+            <a href="/index.html" class="terms">Guidelines for privacy</a>
         </section>
         <section class="all_rights_text">
             <h3>All rights Resereved</h3>
@@ -89,6 +87,10 @@
          </section>
     </footer>
     <!--Javascript files-->
-    <script src="js/script.js"></script>
+    <script src="js/menu.js"></script> 
+    <script type="module" src="js/browse.js"></script>
+    <script type="module" src="js/basket.js"></script>
+    <!--Pop up message - added to basket-->
+    <div id="toast" class="toast">Movie added to basket</div>
 </body>
 </html>

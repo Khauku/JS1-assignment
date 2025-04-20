@@ -1,22 +1,8 @@
-header {
-    background-color: #09031D;
-    height: 70px;
-    width: 100%;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    overflow-x: visible !important;
-    box-sizing: border-box;
-}
 
-
-/* Basket */
 
 body {
     overflow-x: visible !important;
     background-color: black;
-    font-family: Inter;
     font-family: "Inter", sans-serif;
     .container { display: flex; gap: 30px}
     .movies { flex: 2; display: flex; flex-wrap: wrap; gap: 20px; }
@@ -49,13 +35,13 @@ body {
 }
 
 .img_source {
-    font-size: 9px;
+    font-size: 8px;
     color: #EDE2E2;
     opacity: 60%;
     position: absolute;
     bottom: 0px;
     top: 93%;
-    left: 90%;
+    left: 85%;
 }
 
 .cta {
@@ -113,7 +99,7 @@ body {
     position: absolute;
 }
 
-/* API Movies */
+/* Movies */
 .top-movies {
     font-family: "Koulen", sans-serif;
     font-style: normal;
@@ -140,195 +126,9 @@ body {
     padding-left: 15px;
 }
 
-
-#api-movie-container {
-    display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-    background-color: #000;
-    margin-top: -20px;
-    margin-left: -40px;
-}
-
-#api-movie-container .movie {
-    display: inline-block;
-    border-radius: 11%;
-    margin: 20px;
-    margin-bottom: 30px;
-    border: 2px solid transparent;
-}
-
-#api-movie-container .movie img {
-    width: 230px;
-    height: 340px;
-    object-fit: cover;
-    border-radius: inherit;
-}
-
-#api-movie-container .movie h2 {
-    font-size: 15px;
-    text-align: center;
-}
-
-.movie-wrapper {
-    position: relative;
-    display: inline-block;
-    overflow-x: hidden;
-    border-radius: 11%;
-    width: 230px;
-    height: 340px;
-}
-
-.movie-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.movie-wrapper:hover .movie-image {
-    opacity: 0.4;
-}
-
-.movie-wrapper:hover .movie-overlay {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.movie-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    justify-content: center;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.info-btn, .add-btn {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 5px;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.info-btn:hover, .add-btn:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #000;
-}
-
-
-footer {
-    background-color: #03031d;
-    height: 30px;
-    width: 100%;
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-}
-
-/* Social Media Icons */
-.fa-instagram {
-    color: #fff;
-    opacity: 47%;
-    padding-left: 20px;
-    padding-right: 10px;
-}
-
-.fa-x-twitter {
-    color: #fff;
-    opacity: 47%;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.fa-youtube {
-    color: #fff;
-    opacity: 47%;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.fa-tiktok {
-    color: #fff;
-    opacity: 47%;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-/* Headings for structure */
-.terms_text h3,
-.all_rights_text h3 {
-    display: none;
-}
-
-.terms_text {
-    color: #fff;
-    opacity: 47%;
-    font-size: 10px; 
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    gap: 15px;
-    left: 40%;
-}
-
-.terms {
-    text-decoration: none;
-    white-space: nowrap; 
-    display: flex; 
-}
-
-.terms:visited {
-    color: #fff;
-    opacity: 47%;
-    text-decoration: none; 
-}
-
-
-.all_rights_text {
-    text-decoration: none;
-    white-space: nowrap; 
-    display: flex; 
-    color: #fff;
-    opacity: 47%;
-    font-size: 10px; 
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: 82%;
-    max-width: 100vw;
-}
-
 /* Smaller Screens */
 
 @Media (max-width: 1180px) and (min-width: 757px)  {
-    .all_rights_text {
-        position: absolute;
-        right: 10%;
-    }
-
-    .terms_text {
-        display: none;
-    }
-
     .logo {
         margin-right: 80px;
         font-size: 18px;
@@ -344,41 +144,12 @@ footer {
  
     }
 
-    .menu {
-        font-size: 12px;
-        gap: 30px;
-    }
-
-    .terms_text {
-        display: none;
-    }
-
-    .all_rights_text {
-        position: absolute;
-        left: 65%;
-    }
-
 }
 
 @Media (max-width: 570px) and (min-width: 430px) {
 
     .logo {
         font-size: 15px;
-    }
-
-    .menu {
-        font-size: 12px;
-        gap: 30px;
-        margin-left: 80px;
-    }
-
-    .terms_text {
-        display: none;
-    }
-
-    .all_rights_text {
-        position: absolute;
-        left: 65%;
     }
 
      /* Search Bar */
@@ -398,8 +169,6 @@ footer {
         position: relative;
         top: 430px;
     }
-
-
 
     .welcome h1 {
         font-size: 20px;
@@ -423,23 +192,6 @@ footer {
         margin-left: 10px;
         margin-right: 10px;
         padding-right: 20px;
-    }
-
-    .menu {
-        font-size: 12px;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        padding-left: 5px;
-    }
-
-    .menu ul {
-        gap: 0px;
-        padding: 0;
-        margin: 0;
     }
 
     /* Search Bar */
@@ -469,12 +221,6 @@ footer {
         left: 10px;
     }
 
-    .img_source {
-        font-size: 7px;
-        opacity: 40%;
-        position: absolute;
-    }
-
     .cta {
         font-size: 10px;
         top: auto;
@@ -492,33 +238,6 @@ footer {
         display: flex;
         height: 200%;
         width: 100%;
-    }
-
-    .footer {
-        position: relative;
-    }
-
-    .fa-instagram, 
-    .fa-x-twitter,
-    .fa-youtube,
-    .fa-tiktok {
-        padding: 5px;
-    }
-
-    .terms_text {
-        display: none;
-    }
-
-    .all_rights_text {
-        font-size: 10px;
-        display: flex;
-        position: absolute;
-        flex-direction: column;
-        left: 45%;
-    }
-
-    .terms {
-        text-decoration: none;
     }
 
     }

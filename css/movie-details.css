@@ -1,0 +1,298 @@
+
+body {
+    background-color: black;
+    font-family: Inter;
+    overflow-x: hidden;
+}
+
+/* Background image */
+.welcome_image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 70vh;
+    position: relative;
+}
+
+.img_source {
+    font-size: 9px;
+    color: black;
+    opacity: 60%;
+    position: absolute;
+    bottom: 0px;
+    top: 93%;
+    left: 90%;
+}
+
+
+/* Info About the Movie */
+.movie_info_container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding-left: 80px;
+    margin-bottom: 0px;
+}
+
+.movie_title h1 {
+    font-family: "Koulen", sans-serif;
+    font-size: 30px;
+    color: #fff;
+}
+
+.movie_info {
+    display: flex;
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    font-size: 10px;
+    opacity: 0.65;
+    gap: 20px;
+    padding-left: 15px;
+    padding-top: 42px;
+    flex-wrap: nowrap;
+}
+
+.m_info {
+    white-space: nowrap;
+    display: flex;
+    position: relative;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Movie Description */
+#product-description {
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 32px;
+    padding-left: 80px;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+
+/* Price and Purchase Button */ 
+#product-price { 
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 200;
+    padding-left: 80px;
+    margin-bottom: 40px;
+    padding-bottom: 17px;
+}
+
+.cta {
+    display: inline-block;
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    text-decoration: none;
+    background-color: black;
+    position: relative;
+    padding: 5px 9px;
+    border-color: #fff;
+    border: solid 1px;
+    border-radius: 9px;
+    font-size: 13px;
+    gap: 15px;
+    left: 200px;
+    bottom: 85px;
+  }
+
+.cta:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Smaller Sizes */
+
+@Media (max-width: 1180px) and (min-width: 757px) {
+    .logo {
+        margin-right: 80px;
+    }
+}
+
+@Media (max-width: 757px) and (min-width: 570px) {
+    .logo {
+        font-size: 18px;
+        padding: 10px; 
+    }
+
+    .search_bar {
+        width: 100%;
+        margin-top: 10px;
+        padding: 6px;
+    }
+
+     /* Info About the Movie Toy Story */ 
+     .movie_title h1 {
+        position: relative;
+        font-size: 25px;
+        white-space: nowrap;
+        right: -1px;
+        top: 15px;
+    
+    }
+
+    .movie_info {
+        flex-direction: row;
+        gap: 10px;
+        position: relative;
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+
+    .movie_about h2 {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 32px;
+        position: relative;
+        right: 0px;
+        top: 50px;
+    }
+
+    #product-price { 
+        font-size: 18px;
+        position: relative;
+        right: 0px;
+        top: 30px;
+    }
+
+    .cta {
+       font-size: 12px; 
+       padding: 5px 8px;
+       position: relative;
+       bottom: 50px;
+       left: 170px;
+    }
+}
+
+@Media (max-width: 570px) and (min-width: 430px) {
+
+    .logo {
+        font-size: 15px;
+    }
+
+    .img_source {
+        font-size: 9px;
+        position: absolute;
+    }
+
+
+    /* Info About the Movie */ 
+    .movie_title h1 {
+        position: relative;
+        font-size: 25px;
+        white-space: nowrap;
+        right: 19px;
+        top: 0px;
+    
+    }
+
+    .movie_info {
+        flex-direction: row;
+        gap: 2px;
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    .m_info {
+        padding-top: 0;    
+    }
+
+    /* Movie Description */
+    .movie_about h2 {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 32px;
+        position: relative;
+        right: 20px;
+        top: 40px;
+    }
+
+    .cta {
+       font-size: 12px; 
+       position: relative;
+       bottom: 60px;
+       left: 170px;
+    }
+
+}
+
+/* Media Iphone 14 Pro Max */ 
+@media (max-width: 430px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        width: 100%;
+    } 
+
+    .logo {
+        position: static;
+        font-size: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-right: 20px;
+        white-space: nowrap;
+    }
+
+    .img_source {
+        font-size: 9px;
+        position: absolute;
+    }
+
+
+    /* Info About the Movie */ 
+    .movie_title h1 {
+        position: relative;
+        font-size: 25px;
+        white-space: nowrap;
+        right: 19px;
+        top: 0px;
+    
+    }
+
+    .movie_info {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 10px;
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+
+    .m_info {
+        white-space: nowrap;   
+        display: flex;
+        align-items: center;
+    }
+
+    /* Movie Description */
+    .movie_about h2 {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 32px;
+        position: relative;
+        right: 20px;
+    }
+
+    /* Price and Purchase Button */ 
+    #product-price { 
+        font-size: 18px;
+        position: relative;
+        right: 22px;
+        top: 22px;
+    }
+
+    .cta {
+       font-size: 12px; 
+       position: relative;
+       bottom: 60px;
+       left: 170px;
+    }
+}

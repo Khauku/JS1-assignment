@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,41 +12,56 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Koulen&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d10e164dbb.js" crossorigin="anonymous"></script>
-    <link href="css/checkout.css" rel="stylesheet">
+    <link href="../css/checkout.css" rel="stylesheet">
+    <link href="../css/shared/basket.css" rel="stylesheet">
+    <link href="../css/shared/menu.css" rel="stylesheet">
+    <link href="../css/shared/footer.css" rel="stylesheet">
 </head>
 <body>
-    <!--Square Eyes Logo - Menu-->
-    <header>
-        <a href="index.html" class="logo">Square Eyes</a>
+     <!--Square Eyes Logo - Menu-->
+<header> 
+    <a href="../index.html" class="logo">Square Eyes</a>
     <nav class="menu">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="movies.html">Movies</a></li>
-            <li><a href="aboutus.html">About us</a></li>
-            <li><a href="contact.html">Contact</a></li>  
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../browse.html">Movies</a></li>
+            <li><a href="../aboutus.html">About us</a></li>
+            <li><a href="../contact.html">Contact</a></li>  
         </ul>
     </nav>
-    </header>
+    <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="basket-container">
+        <button id="basket-toggle" class="basket-button" aria-expanded="false" aria-controls="basket-dropdown">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="basket-count">0</span>
+        </button>
+
+        <div class="basket-dropdown" id="basket-dropdown" style="display: none;">
+            <ul id="basket-list" class="basket-list"></ul>
+            <button id="checkout-btn">Checkout</button>
+        </div>
+    </div>
+</header>
     <main>
-     <!--Checkout Cart-->
-     <section glass="grid-container">
-           <div class="left-column"> 
+     <!--Toy Story Checkout Cart-->
+     <section class="grid-container"> 
+           <div class="left-column">
              <h1>Confirm your purchase</h1>
-             <img id="movie-poster" src="" alt="Movie Cover" class="movie-cover">
-             <h2 id="movie-title"></h2>
-             <p id="movie-price"></p>
-            </div>
-            <div class="res-icons">
-                <img src="images/4k.jpg" alt="4K Icon" class="fk">
-                <img src="images/hd.jpg" alt="HD Icon" class="hd">
-            </div>
-            <div id="loading-indicator" style="display:none;">Loading...</div>
+             <div class="checkout-movie-info">
+                <img id ="checkout-cover" alt="Movie cover" />
+                <div class="movie-text-details">
+                    <h2 id="checkout-title">Movie Title</h2>
+                    <p id="checkout-price" class="checkout-meta">Price</p>
+                </div>
+             </div>
             <!--Payment Methods--> 
               <h3>Payment methods:</h3>
             <div class="card-icons">
-                <img src="images/paypal.png" alt="Paypal" class="paypal">
-                <img src="images/card.png" alt="Card 1" class="card">
-                <img src="images/card2.png" alt="Card 2" class="card2">
+                <img src="../images/paypal.png" alt="Paypal" class="paypal">
+                <img src="../images/card.png" alt="Card 1" class="card">
+                <img src="../images/card2.png" alt="Card 2" class="card2">
             </div>
             <!--Credit Card Checkout Form-->
             <h4>Credit card:</h4>
@@ -65,10 +79,10 @@
                 </div>
             </form>
             <div class="cta-position">
-                <button id="checkout-btn" class="cta">Confirm payment</button>
+                <a href="confirmation/index.html" class="cta">Confirm payment</a>
            </div> 
          </div> 
-    </section>
+        </section>
         <!--After Purchase Info-->
          <section class="right-column-top">
             <div class="square-logo">
@@ -99,7 +113,7 @@
             </div>
          </section>
     </main>
-<footer>     
+ <footer>     
     <!--Social Media Icons-->  
     <i class="fa-brands fa-instagram"></i>
     <i class="fa-brands fa-x-twitter"></i>
@@ -108,15 +122,17 @@
   <!--Terms text-->
     <section class="terms_text">
         <h6>Legal terms</h6>
-       <a href="index.html" class="terms">Customize cookies</a>
-       <a href="index.html" class="terms">Terms of use</a>
-       <a href="index.html" class="terms">Guidelines for privacy</a>
+       <a href="../index.html" class="terms">Customize cookies</a>
+       <a href="../index.html" class="terms">Terms of use</a>
+       <a href="../index.html" class="terms">Guidelines for privacy</a>
     </section>
     <section class="all_rights_text">
         <h6>All rights Resereved</h6>
         <p>© 2024 Square Eyes Inc. All Rights Reserved.</p>
      </section>
-</footer>
-<script src="js/script.js"></script>
+ </footer>
+ <script type="module" src="../js/basket.js"></script>
+ <script type="module" src="../js/checkout.js"></script>
+ <script src="../js/menu.js"></script>
 </body>
 </html>

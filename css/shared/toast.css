@@ -1,0 +1,21 @@
+/* pop up message - add to cart */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #d8d8d8;
+    color: #09031D;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+.toast.show {
+    opacity: 1;
+    visibility: visible;
+}
